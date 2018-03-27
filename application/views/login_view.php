@@ -33,8 +33,7 @@
   <!-- /.login-logo -->
   <div class="login-box-body">
     <p class="login-box-msg">Sign in to start your session</p>
-
-    <form action="../../index2.html" autocomplete="on" method="post">
+    <form autocomplete="on" method="post">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" name="uname" placeholder="Username" value = "" required autofocus>
         <span class="glyphicon glyphicon-user form-control-feedback"></span>

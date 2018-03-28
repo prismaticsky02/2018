@@ -1,15 +1,17 @@
 <?php
 class login_controller extends CI_Controller {
 
-        public function login_function($frompage = 'login_view',$topage = 'displaymsg_view')
+        public function login_function($frompage = 'login_view')
         {
         	 if (! file_exists(APPPATH.'views/'.$frompage.'.php'))
         	{
-                show_404();
-        }
+                        show_404();
+                }
+        
 
          $this->load->view($frompage);
-
+        }
+ }
       //  $this->load->helper(array('form', 'url'));
 
         //        $this->load->library('form_validation');
@@ -23,5 +25,4 @@ class login_controller extends CI_Controller {
             //            $this->load->view('$topage');
               //  }
         
-        }
-}
+        

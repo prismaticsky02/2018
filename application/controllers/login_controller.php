@@ -1,28 +1,31 @@
-<?php
-class login_controller extends CI_Controller {
+<?php 
+defined('BASEPATH') OR exit('No direct script access allowed');
 
-        public function login_function($frompage = 'login_view')
-        {
-        	 if (! file_exists(APPPATH.'views/'.$frompage.'.php'))
-        	{
-                        show_404();
-                }
-        
+class Login_controller extends CI_Controller{
+    
+    function __construct(){
+        parent::__construct();
+        //$this->load->helper('url_helper');
+    }
 
-         $this->load->view($frompage);
-        }
- }
-      //  $this->load->helper(array('form', 'url'));
+    public function index(){
+        $this->load->view('login_view');
+    }
 
-        //        $this->load->library('form_validation');
+    public function process(){
+        $data = array(
+                'user_name' => $this->input->post('uname'),
+                'user_password' => $this->input->post('pword'));        
+        $this->load->view("displaymsg_view", $data);
+    } 
 
-//                if ($this->form_validation->run() == FALSE)
-  //              {
-    //                    $this->load->view('$frompage');
-      //          }
-        //        else
-          //      {
-            //            $this->load->view('$topage');
-              //  }
-        
-        
+    public function display_emp(){
+        $data = array(
+                'user_name' => $this->input->post('uname'),
+                'user_password' => $this->input->post('pword'));        
+        $this->load->view("displaymsg_view", $data);
+    } 
+
+
+}
+?>

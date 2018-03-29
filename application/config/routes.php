@@ -49,21 +49,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-
-$route['Pages'] = 'Pages';
-$route['default_controller'] = 'login_controller/login_function';
+$route['login'] = 'login_controller';
+$route['employee'] = 'employee_controller';
+$route['default_controller'] = 'user_controller';
+//$route['Pages'] = 'Pages';
 //$route['(:any)'] = 'view/$1';
-$route['Employ'] = 'Employ';
-$route['Add_emp'] = 'Add_emp';
-$route['Transaction'] = 'Transaction';
-$route['Dead'] = 'Dead';
+//$route['Employ'] = 'Employ';
+//$route['Add_emp'] = 'Add_emp';
+//$route['Transaction'] = 'Transaction';
+//$route['Dead'] = 'Dead';
 //$route['default_controller'] = 'Dashboard';
 
-$route['employee/add'] = 'employee/add';
-$route['employee/(:any)'] = 'employee/display_employee/$1';
+//$route['employee/add'] = 'employee/add';
+//$route['employee/(:any)'] = 'employee/display_employee/$1';
 //$route['emp'] = 'emp';
 //$route['default_controller'] = 'pages/display_emp';
-$route['employee'] = 'employee';
+//$route['employee'] = 'employee';
 
 //$route['404_override'] = '';
 //$route['translate_uri_dashes'] = FALSE;

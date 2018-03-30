@@ -7,14 +7,14 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?php echo base_url().'theme/bower_components/bootstrap/dist/css/bootstrap.min.css'; ?>">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?php echo base_url().'theme/bower_components/font-awesome/css/font-awesome.min.css'; ?>">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
-  <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" href="<?php echo base_url().'theme/bower_components/Ionicons/css/ionicons.min.css'; ?>">
+  <link rel="stylesheet" href="<?php echo base_url().'theme/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css'; ?>">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="<?php echo base_url().'theme/dist/css/AdminLTE.min.css'; ?>">
   
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,7 +26,9 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body style="height:auto; min-height:100%;">
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class=wrapper>
+  <div class="content-wrapper">
 <section class = "content-header">
   <h1>Employee</h1>
   <ol class = "breadcrumb">
@@ -71,12 +73,12 @@
             <input class="form-control" name="number" placeholder="Contact Number" type="text" required>
           </div>
           <div class="form-group">
-                <label>Date:</label>
+                <label>Birth Date</label>
                 <div class="input-group date">
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-                  <input type="text" class="form-control pull-right" name="birthday" id="datepicker" required>
+                  <input type="text" class="form-control pull-right" name="birthday" placeholder="mm/dd/yyyy" id="datepicker" required>
                 </div>
                 <!-- /.input group -->
           </div>
@@ -99,12 +101,14 @@
 </div>
 </div>
 </section>
+</div>
+</div>
 <!-- /.login-box -->
 <!-- jQuery 3 -->
-<script src = "bower_components/jquery/dist/jquery.min.js"></script>
-<script src = "bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src = "<?php echo base_url().'theme/bower_components/jquery/dist/jquery.min.js'; ?>"></script>
+<script src = "<?php echo base_url().'theme/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js'; ?>"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src = "bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src = "<?php echo base_url().'theme/bower_components/bootstrap/dist/js/bootstrap.min.js'; ?>"></script>
 <script>
   //Date picker
     $('#datepicker').datepicker({

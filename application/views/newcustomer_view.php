@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>New Web App User | Manila South Cemetery</title>
+  <title>New Customer | Manila South Cemetery</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -29,7 +29,7 @@
   <div class="wrapper">
     <div class="content-wrapper">
 <section class = "content-header">
-  <h1>Web App User</h1>
+  <h1>Customer</h1>
   <ol class = "breadcrumb">
     <li>
       <a href="#">
@@ -37,7 +37,7 @@
       </a>
     </li>
     <li class = "active">
-      <a href="#">User</a>
+      <a href="#">Customer</a>
     </li>
   </ol>
 </section>
@@ -46,48 +46,67 @@
     <div class = col-md-6>
       <div class="box box-primary">
         <div class="box-header with-border">
-          <h3 class="box-title">Create a Web App User</h3>
+          <h3 class="box-title">Register a Customer</h3>
         </div>
   <!-- /.login-logo -->
-      <form role="form" autocomplete="on" action = "http://localhost/2018/index.php/user_controller/process" method="POST">
+      <form role="form" autocomplete="on" action = "http://localhost/2018/index.php/customer_controller/process" method="POST">
         <div class="box-body">
           <div class = "form-group">
-            <label>Username</label>
-            <input class="form-control" name="uname" placeholder="Username" type="text" required autofocus>
+            <label>Full Name</label>
+            <input class="form-control" name="name" placeholder="Full Name" type="text" required autofocus>
           </div>
           <div class = "form-group">
-            <label>Password</label>
-            <input class="form-control" name="pword" placeholder="Password" type="text">
+            <label>Address</label>
+            <textarea class = "form-control" name="address" rows="3" placeholder= "Address" required></textarea>
           </div>
           <div class = "form-group">
-            <label>Confirm Password</label>
-            <input class="form-control" name="cpword" placeholder="Confirm Password" type="text" required>
+            <label>Contact Number</label>
+            <input class="form-control" name="contact" placeholder="Contact Number" type="text" required>
+          </div>
+          <div class = "form-group">
+            <label>Email Address</label>
+            <input class="form-control" name="email" placeholder="Email Address" type="email" required>
           </div>
           <div class="form-group">
-            <label>User Role</label>
+            <label>Customer Type</label>
               <div class="radio">
                 <label>
-                  <input type="radio" name="emp" id="optionsRadios1" value="Read and Write">
-                    User can read and write
+                  <input type="radio" name="type" id="optionsRadios1" value="Private">
+                    Private
                 </label>
                 </div>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="emp" id="optionsRadios2" value="Read and Print">
-                      User can read and download files
+                    <input type="radio" name="type" id="optionsRadios2" value="Public">
+                      Public
+                    </label>
+                  </div>
+            </div>
+            <div class="form-group">
+            <label>Customer Function</label>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="function" id="optionsRadios1" value="Sold-to">
+                    Sold-to
+                </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="function" id="optionsRadios2" value="Bill-to">
+                      Bill-to
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="emp" id="optionsRadios3" value="Read only">
-                      User is read-only
+                      <input type="radio" name="function" id="optionsRadios3" value="Payer">
+                      Payer
                     </label>
                   </div>
             </div>
           <div class="row">
             <!-- /.col -->
             <div class="col-xs-12">
-              <button type="submit" class="btn btn-primary btn-block btn-flat">Create Web App User</button>
+              <button type="submit" class="btn btn-primary btn-block btn-flat">Register Customer</button>
             </div>
               <!-- /.col -->
           </div>
@@ -103,8 +122,7 @@
 </div>
 <!-- /.login-box -->
 <!-- jQuery 3 -->
-<script src = "<?php echo base_url().'theme/bower_components/jquery/dist/jquery.min.js'; ?>">
-</script>
+<script src = "<?php echo base_url().'theme/bower_components/jquery/dist/jquery.min.js'; ?>"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src = "<?php echo base_url().'theme/bower_components/bootstrap/dist/js/bootstrap.min.js'; ?>"></script>
 </body>

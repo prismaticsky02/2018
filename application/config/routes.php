@@ -51,7 +51,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['login'] = 'login_controller';
 $route['employee'] = 'employee_controller';
-$route['default_controller'] = 'user_controller';
+$route['user'] = 'user_controller';
+$route['customer'] = 'customer_controller';
+$route['default_controller'] = 'deceased_controller';
 //$route['Pages'] = 'Pages';
 //$route['(:any)'] = 'view/$1';
 //$route['Employ'] = 'Employ';

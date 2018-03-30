@@ -16,7 +16,7 @@ class User_controller extends CI_Controller{
         $data = array(
                 'employee_uname' => $this->input->post('uname'),
                 'employee_pword' => $this->input->post('pword'),
-                'employee_role' => $this->input->post('role'));        
+                'employee_role' => $this->input->post('emp'));        
         $this->load->view("displayuser_view", $data);
     } 
 

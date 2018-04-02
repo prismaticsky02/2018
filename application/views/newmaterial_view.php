@@ -77,8 +77,8 @@
                 </div>
                 <div class="radio">
                 <label>
-                  <input type="radio" name="category" id="optionsRadios1" value="Grave Rental">
-                    Grave Rental
+                  <input type="radio" name="category" id="optionsRadios1" value="Grave Ownership">
+                    Grave Ownership
                 </label>
                 </div>
               

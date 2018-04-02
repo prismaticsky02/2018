@@ -49,7 +49,7 @@
           <h3 class="box-title">Create a Web App User</h3>
         </div>
   <!-- /.login-logo -->
-      <form role="form" autocomplete="on" action = "http://localhost/2018/index.php/user_controller/process" method="POST">
+      <form role="form" autocomplete="on" action="<?php echo base_url()?>User/add_user" method="POST">
         <div class="box-body">
           <div class = "form-group">
             <label>Username</label>
@@ -57,32 +57,36 @@
           </div>
           <div class = "form-group">
             <label>Password</label>
-            <input class="form-control" name="pword" placeholder="Password" type="text">
+            <input class="form-control" name="pword" placeholder="Password" type="password">
           </div>
           <div class = "form-group">
             <label>Confirm Password</label>
-            <input class="form-control" name="cpword" placeholder="Confirm Password" type="text" required>
+            <input class="form-control" name="cpword" placeholder="Confirm Password" type="password" required>
           </div>
           <div class="form-group">
             <label>User Role</label>
               <div class="radio">
                 <label>
-                  <input type="radio" name="emp" id="optionsRadios1" value="Read and Write">
+                  <input type="radio" name="emp" id="optionsRadios1" value="Employee_rw">
                     User can read and write
                 </label>
                 </div>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="emp" id="optionsRadios2" value="Read and Print">
+                    <input type="radio" name="emp" id="optionsRadios2" value="Employee_rp">
                       User can read and download files
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="emp" id="optionsRadios3" value="Read only">
+                      <input type="radio" name="emp" id="optionsRadios3" value="Employee_ro">
                       User is read-only
                     </label>
                   </div>
+            </div>
+          <div class = "form-group">
+            <label>Employee ID</label>
+            <input class="form-control" name="empid" placeholder="Employee ID" type="text" required>
             </div>
           <div class="row">
             <!-- /.col -->
@@ -92,11 +96,10 @@
               <!-- /.col -->
           </div>
         </div>
-        </form>
-      
+      </form>
   <!-- /.login-box-body -->
-</div>
-</div>
+    </div>
+  </div>
 </div>
 </section>
 </div>

@@ -50,7 +50,7 @@
           <h3 class="box-title">Register a Deceased</h3>
          </div>
   <!-- /.login-logo -->
-      <form role="form" autocomplete="on" action = "http://localhost/2018/index.php/deceased_controller/process" method="POST">
+      <form role="form" autocomplete="on" action = "<?php echo base_url()?>Deceased/add_deceased" method="POST">
         <div class="box-body">
           <div class = "form-group">
             <label>Full Name</label>
@@ -62,7 +62,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-                  <input type="text" class="form-control pull-right" name="birthday" placeholder="mm/dd/yyyy" id="datepicker1" required>
+                  <input type="text" class="form-control pull-right" name="birthday" placeholder="mm-dd-yyyy" id="datepicker1" required>
                 </div>
                 <!-- /.input group -->
           </div>
@@ -72,7 +72,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-                  <input type="text" class="form-control pull-right" name="deathday" placeholder="mm/dd/yyyy" id="datepicker2" required>
+                  <input type="text" class="form-control pull-right" name="deathday" placeholder="mm-dd-yyyy" id="datepicker2" required>
                 </div>
                 <!-- /.input group -->
           </div>

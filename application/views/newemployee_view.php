@@ -50,7 +50,7 @@
           <h3 class="box-title">Register an Employee</h3>
          </div>
   <!-- /.login-logo -->
-      <form role="form" autocomplete="on" action = "http://localhost/2018/index.php/employee_controller/process" method="POST">
+      <form role="form" autocomplete="on" action = "<?php echo base_url()?>Employee/add_employee" method="POST">
         <div class="box-body">
           <div class = "form-group">
             <label>First Name</label>
@@ -64,6 +64,21 @@
             <label>Last Name</label>
             <input class="form-control" name="lname" placeholder="Last Name" type="text" required>
           </div>
+          <div class="form-group">
+            <label>Sex</label>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="sex" id="optionsRadios1" value="Male">
+                    Male
+                </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="sex" id="optionsRadios2" value="Female">
+                      Female
+                    </label>
+                  </div>
+            </div>
           <div class = "form-group">
             <label>Address</label>
             <textarea class = "form-control" name="address" rows="3" placeholder= "Address" required></textarea>

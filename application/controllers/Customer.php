@@ -5,23 +5,37 @@ class Customer extends CI_Controller{
     
     function __construct(){
         parent::__construct();
-        //$this->load->helper('url_helper');
     }
 
     public function index(){
         $this->load->view('newcustomer_view');
     }
 
-    public function process(){
+    public function add_customer(){
+        date_default_timezone_set('Asia/Manila');
+        $timestamp = date('Y-m-d H:i:s');
+        
         $data = array(
-                'customer_name' => $this->input->post('name'),
-                'customer_address' => $this->input->post('address'),
-                'customer_contact' => $this->input->post('contact'),
-                'customer_email' => $this->input->post('email'),
-                'customer_type' => $this->input->post('type'),
-                'customer_function' => $this->input->post('function'));        
-        $this->load->view("displaycust_view", $data);
-    } 
+                'CUSTOMER_NAME' => $this->input->post('name'),
+                'CUSTOMER_ADDRESS' => $this->input->post('address'),
+                'CUSTOMER_CONTACT' => $this->input->post('contact'),
+                'CUSTOMER_EMAIL' => $this->input->post('email'),
+                'CUSTOMER_TYPE' => $this->input->post('type'),
+                'CUSTOMER_FUNCTION' => $this->input->post('function'),
+                'CUSTOMER_DATECREATED' => $timestamp,
+                'CUSTOMER_LASTCHANGED' => $timestamp,
+                'CUSTOMER_CHANGEDBY' => 'AABAWAG',
+                'CUSTOMER_STATUS' => 'Active'); 
 
+        $this->load->model('Customer_model');
+        
+        if($this->Customer_model->add($data)){
+            $this->load->view("displaycust_view", $data);
+        }
+        else{
+            echo "Data Not Inserted";
+        }       
+    } 
+    
 }
 ?>

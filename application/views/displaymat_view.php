@@ -1,12 +1,16 @@
 <html>
 <head>
-        <title>Display Employee Details</title>
+        <title>Display Material Details</title>
 </head>
 <body>
-        <h5><?php echo $material_name;?></h5>
-        <h5><?php echo $material_category;?></h5>
-        <h5><?php echo $material_amount;?></h5>
-        <h5><?php echo $material_perquan;?></h5>
-        <h5><?php echo $material_description;?></h5>
+        <h5><?php echo $MATERIAL_NAME;?></h5>
+        <h5><?php echo $MATERIAL_CATEGORY;?></h5>
+        <h5><?php echo $MATERIAL_PRICE;?></h5>
+        <h5><?php echo $MATERIAL_PERQUANTITY;?></h5>
+        <h5><?php echo $MATERIAL_DESCRIPTION;?></h5>
+        <h5><?php echo $MATERIAL_DATECREATED;?></h5>
+        <h5><?php echo $MATERIAL_LASTCHANGED;?></h5>
+        <h5><?php echo $MATERIAL_CHANGEDBY;?></h5>
+        <h5><?php echo $MATERIAL_STATUS;?></h5>
 </body>s
 </html>

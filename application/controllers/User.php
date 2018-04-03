@@ -14,6 +14,7 @@ class User extends CI_Controller{
     public function add_user(){
         date_default_timezone_set('Asia/Manila');
         $timestamp = date('Y-m-d H:i:s');
+        
         $data = array(
                 'USER_NAME' => $this->input->post('uname'),
                 'USER_PASSWORD' => $this->input->post('pword'),

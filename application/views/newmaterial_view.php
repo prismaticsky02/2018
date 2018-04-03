@@ -49,7 +49,7 @@
           <h3 class="box-title">Create an Offer or Service</h3>
         </div>
   <!-- /.login-logo -->
-      <form role="form" autocomplete="on" action = "http://localhost/2018/index.php/material_controller/process" method="POST">
+      <form role="form" autocomplete="on" action = "<?php echo base_url()?>Material/add_material" method="POST">
         <div class="box-body">
           <div class = "form-group">
             <label>Name</label>

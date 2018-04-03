@@ -5,24 +5,41 @@ class Employee extends CI_Controller{
     
     function __construct(){
         parent::__construct();
-        //$this->load->helper('url_helper');
     }
 
     public function index(){
         $this->load->view('newemployee_view');
     }
 
-    public function process(){
+    public function add_employee(){
+        date_default_timezone_set('Asia/Manila');
+        $date1 = date("Y-m-d", strtotime($this->input->post('birthday')));
+        $timestamp = date('Y-m-d H:i:s');
+
         $data = array(
-                'employee_fname' => $this->input->post('fname'),
-                'employee_mname' => $this->input->post('mname'),
-                'employee_lname' => $this->input->post('lname'),
-                'employee_address' => $this->input->post('address'),
-                'employee_number' => $this->input->post('number'),
-                'employee_birthday' => $this->input->post('birthday'),
-                'employee_email' => $this->input->post('email'));        
-        $this->load->view("displayemp_view", $data);
-    } 
+                'EMPLOYEE_FNAME' => $this->input->post('fname'),
+                'EMPLOYEE_MNAME' => $this->input->post('mname'),
+                'EMPLOYEE_LNAME' => $this->input->post('lname'),
+                'EMPLOYEE_SEX' => $this->input->post('sex'),
+                'EMPLOYEE_ADDRESS' => $this->input->post('address'),
+                'EMPLOYEE_CONTACT' => $this->input->post('number'),
+                'EMPLOYEE_BIRTHDAY' => $date1,
+                'EMPLOYEE_EMAIL' => $this->input->post('email'),
+                'EMPLOYEE_DATECREATED' => $timestamp,
+                'EMPLOYEE_LASTCHANGED' => $timestamp,
+                'EMPLOYEE_CHANGEDBY' => 'AABAWAG',
+                'EMPLOYEE_STATUS' => 'Active');
+        
+        $this->load->model('Employee_model');
+        
+        if($this->Employee_model->add($data)){
+            $this->load->view("displayemp_view", $data);
+        }
+        else{
+            echo "Data Not Inserted";
+        }       
+    }               
 
 }
+
 ?>

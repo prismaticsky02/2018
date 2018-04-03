@@ -30,7 +30,7 @@
   <div class=wrapper>
   <div class="content-wrapper">
 <section class = "content-header">
-  <h1>Employee</h1>
+  <h1>Employees</h1>
   <ol class = "breadcrumb">
     <li>
       <a href="#">
@@ -38,7 +38,7 @@
       </a>
     </li>
     <li class = "active">
-      <a href="#">Employee</a>
+      <a href="#">Employees</a>
     </li>
   </ol>
 </section>
@@ -47,7 +47,7 @@
     <div class = col-md-6>
       <div class="box box-primary">
         <div class="box-header with-border">
-          <h3 class="box-title">Register an Employee</h3>
+          <h3 class="box-title">New Employee</h3>
          </div>
   <!-- /.login-logo -->
       <form role="form" autocomplete="on" action = "<?php echo base_url()?>Employee/add_employee" method="POST">

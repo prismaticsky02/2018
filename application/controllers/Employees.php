@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Employee extends CI_Controller{
+class Employees extends CI_Controller{
     
     function __construct(){
         parent::__construct();
@@ -9,6 +9,10 @@ class Employee extends CI_Controller{
 
     public function index(){
         $this->load->view('newemployee_view');
+    }
+
+    public function listemployee(){
+        $this->load->view('listemployee_view');
     }
 
     public function add_employee(){

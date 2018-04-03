@@ -11,6 +11,10 @@ class Deceased extends CI_Controller{
         $this->load->view('newdeceased_view');
     }
 
+    public function listdeceased(){
+        $this->load->view('listdeceased_view');
+    }
+
     public function add_deceased(){
         date_default_timezone_set('Asia/Manila');
         $timestamp = date('Y-m-d H:i:s');

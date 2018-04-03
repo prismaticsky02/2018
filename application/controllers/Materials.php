@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Material extends CI_Controller{
+class Materials extends CI_Controller{
     
     function __construct(){
         parent::__construct();
@@ -9,6 +9,10 @@ class Material extends CI_Controller{
 
     public function index(){
         $this->load->view('newmaterial_view');
+    }
+
+    public function listmaterials(){
+        $this->load->view('listmaterial_view');
     }
 
     public function add_material(){

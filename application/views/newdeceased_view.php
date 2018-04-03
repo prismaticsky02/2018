@@ -47,7 +47,7 @@
     <div class = col-md-6>
       <div class="box box-primary">
         <div class="box-header with-border">
-          <h3 class="box-title">Register a Deceased</h3>
+          <h3 class="box-title">New Deceased</h3>
          </div>
   <!-- /.login-logo -->
       <form role="form" autocomplete="on" action = "<?php echo base_url()?>Deceased/add_deceased" method="POST">

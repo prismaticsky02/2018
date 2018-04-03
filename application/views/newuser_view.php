@@ -29,7 +29,7 @@
   <div class="wrapper">
     <div class="content-wrapper">
 <section class = "content-header">
-  <h1>Web App User</h1>
+  <h1>Web App Users</h1>
   <ol class = "breadcrumb">
     <li>
       <a href="#">
@@ -37,7 +37,7 @@
       </a>
     </li>
     <li class = "active">
-      <a href="#">User</a>
+      <a href="#">Web App Users</a>
     </li>
   </ol>
 </section>
@@ -46,7 +46,7 @@
     <div class = col-md-6>
       <div class="box box-primary">
         <div class="box-header with-border">
-          <h3 class="box-title">Create a Web App User</h3>
+          <h3 class="box-title">New Web App User</h3>
         </div>
   <!-- /.login-logo -->
       <form role="form" autocomplete="on" action="<?php echo base_url()?>User/add_user" method="POST">

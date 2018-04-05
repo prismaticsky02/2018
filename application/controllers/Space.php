@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Spaces extends CI_Controller{
+class Space extends CI_Controller{
     
     function __construct(){
         parent::__construct();

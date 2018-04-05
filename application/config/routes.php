@@ -50,17 +50,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['Login'] = 'Login';
-$route['Employees'] = 'Employees';
-$route['Employees/list-of-employees'] = 'Employees/listemployee';
+$route['Employees'] = 'Employee';
+$route['Employees/list-of-employees'] = 'Employee/listemployee';
 $route['Users'] = 'Users';
-$route['Users/list-of-users'] = 'Users/listuser';
+$route['Users/list-of-users'] = 'User/listuser';
 $route['Customers'] = 'Customers';
-$route['Customers/list-of-customers'] = 'Customers/listcustomer';
+$route['Customers/list-of-customers'] = 'Customer/listcustomer';
 $route['Deceased'] = 'Deceased';
 $route['Deceased/list-of-deceased'] = 'Deceased/listdeceased';
 $route['Materials'] = 'Materials';
-$route['Materials/list-of-materials'] = 'Materials/listmaterials';
-$route['Spaces'] = 'Spaces';
+$route['Materials/list-of-materials'] = 'Material/listmaterial';
+$route['Spaces'] = 'Space';
 //$route['default_controller'] = 'User/list_view';
 //$route['Pages'] = 'Pages';
 //$route['(:any)'] = 'view/$1';

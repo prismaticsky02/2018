@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Customers extends CI_Controller{
+class Customer extends CI_Controller{
     
     function __construct(){
         parent::__construct();
@@ -12,7 +12,9 @@ class Customers extends CI_Controller{
     }
 
     public function listcustomer(){
-        $this->load->view('listcustomer_view');
+        $this->load->model('Customer_model');
+        $data['h']=$this->Customer_model->select(); 
+        $this->load->view('listcustomer_view', $data);
     }
 
     public function add_customer(){

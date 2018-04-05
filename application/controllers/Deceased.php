@@ -12,7 +12,9 @@ class Deceased extends CI_Controller{
     }
 
     public function listdeceased(){
-        $this->load->view('listdeceased_view');
+        $this->load->model('Deceased_model');
+        $data['h']=$this->Deceased_model->select(); 
+        $this->load->view('listdeceased_view', $data);
     }
 
     public function add_deceased(){

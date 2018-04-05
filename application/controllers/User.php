@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Users extends CI_Controller{
+class User extends CI_Controller{
     
     function __construct(){
         parent::__construct();
@@ -12,7 +12,9 @@ class Users extends CI_Controller{
     }
 
     public function listuser(){
-        $this->load->view('listuser_view');
+        $this->load->model('User_model');
+        $data['h']=$this->User_model->select(); 
+        $this->load->view('listuser_view', $data);
     }
 
     public function add_user(){

@@ -48,9 +48,10 @@
         <div class="box-header with-border">
           <h3 class="box-title">New Offers/Services</h3>
         </div>
+        <div class="box-body">
+        
   <!-- /.login-logo -->
       <form role="form" autocomplete="on" action = "<?php echo base_url()?>Material/add_material" method="POST">
-        <div class="box-body">
           <div class = "form-group">
             <label>Name</label>
             <input class="form-control" name="name" placeholder="For packages, use slashes; e.g. Exhumation/Burial" type="text" required autofocus>
@@ -103,9 +104,8 @@
             </div>
               <!-- /.col -->
           </div>
-        </div>
         </form>
-      
+      </div>
   <!-- /.login-box-body -->
 </div>
 </div>

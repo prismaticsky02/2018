@@ -39,8 +39,21 @@ class Users extends CI_Controller{
         else{
             echo "Data Not Inserted";
         }
-    } 
+    }
 
+    public function batchInsert()
+    {
+        $this->load->model('User_model');
+        $result = $this->User_model->batchInsert($_POST);
+        if($result){
+            echo 1;
+            $this->load->view('displayuser_view',$result);
+        }
+        else{
+            echo 0;
+        }
+        exit;
+    } 
 }
 
 ?>

@@ -49,17 +49,18 @@
                 <h3 class="box-title">New Web App User</h3>
               </div>
               <div class="box-body">
-                <form role="form" autocomplete="on" action="<?php echo base_url()?>Users/add_user" method="POST">
+                <form role="form" autocomplete="on" action="<?php echo base_url()?>Users/batchInsert" method="POST">
                   <table style="width: 100%" class="table">
                     <tbody id="table-details">
                       <tr id="row1" class="jdr1">
+                        <td>
                         <div class = "form-group">
-                          <label>Number 1</label>
+                          <label>Number &nbsp</label><span>1</span>
                             <input type="hidden" value="6437" name="count[]">
                         </div>
                         <div class = "form-group">
                           <label>Username</label>
-                            <input class="form-control" name="jname[]" placeholder="Username" type="text" required autofocus>
+                            <input class="form-control" name="jname[]" placeholder="Username" type="text" required>
                         </div>
                         <div class = "form-group">
                           <label>Password</label>
@@ -92,16 +93,17 @@
                         </div>
                         <div class = "form-group">
                           <label>Employee ID</label>
-                            <input class="form-control" name="jEmpID" placeholder="Employee ID" type="text" required>
+                            <input class="form-control" name="jEmpID[]" placeholder="Employee ID" type="text" required>
                         </div>
-                      </tr>
+                      
+                </tr>
                     </tbody>
                   </table>
-                
+
                   <div class="row">
                     <div class="col-xs-12">
                       <div class = "form-group">
-                        <button type="submit" class="btn btn-primary btn-block btn-flat">Create Web App User</button>
+                        <button type="submit" class="btn btn-primary btn-block btn-flat autofocus">Create Web App User</button>
                       </div>
                     </div>
                   </div>
@@ -113,7 +115,7 @@
                       </div>
                     </div>
                   </div>
-
+                  </td>
                 </form>
               </div>
             </div>
@@ -139,16 +141,55 @@ $(document).ready(function (){
     var $sr = ($(".jdr1").length + 1);
     var rowid = Math.random();
     var $html = '<tr class="jdr1" id="' + rowid + '">' +
-      '<td><span class="btn btn-sm btn-default">' + $sr + '</span><input type="hidden" name="count[]" value="'+Math.floor((Math.random() * 10000) + 1)+'"></td>' + 
-      '<td><input type="text" name="jname[]" placeholder="Username" class="form-control input-sm"></td>' +
-      '<td><input type="text" name="jpass[]" placeholder="Password" class="form-control input-sm"></td>' +
-      '<td><input type="text" name="jrole[]" placeholder="User Role" class="form-control input-sm"></td>' +
-      '<td><input type="text" name="jEmpID[]" placeholder="Employee ID" class="form-control input-sm"></td>' +
-    '</tr>';
-
-    var $html = '<tr class="jdr1" id="' + rowid + '">' +
+                  '<td>' +
                     '<div class = "form-group">' +
-                      '<label>Number + $sr +</label>' +
+                      '<label>Number &nbsp</label>' + $sr +
+                      '<input type="hidden" name="count[]" value="'+Math.floor((Math.random() * 10000) + 1)+'">' +
+                    '</div>' +
+                    '<div class = "form-group">'+
+                      '<label>Username</label>' +
+                      '<input type="text" name="jname[]" placeholder="Username" class="form-control required">' +
+                    '</div>' +
+                    '<div class = "form-group">' +
+                      '<label>Password</label>' +
+                      '<input type="text" name="jpass[]" placeholder="Password" class="form-control required">' +
+                    '</div>' +
+                    '<div class = "form-group">' +
+                      '<label>Confirm Password</label>' +
+                      '<input class="form-control" name="jcpass[]" placeholder="Confirm Password" type="password" required>' +
+                    '</div>' +
+                    '<div class="form-group">' +
+                      '<label>User Role</label>' +
+                        '<div class="radio">' +
+                          '<label>' +
+                            '<input type="radio" name="jrole[]" id="optionsRadios1" value="Employee_rw">' +
+                                'User can read and write' +
+                          '</label>' +
+                        '</div>' +
+                        '<div class="radio">' +
+                          '<label>' +
+                            '<input type="radio" name="jrole[]" id="optionsRadios2" value="Employee_rp">' +
+                              'User can read and download files' +
+                          '</label>' +
+                        '</div>' +
+                        '<div class="radio">' +
+                          '<label>' +
+                            '<input type="radio" name="jrole[]" id="optionsRadios3" value="Employee_ro">' +
+                              'User is read-only' +
+                          '</label>' +
+                        '</div>' +
+                    '</div>' +
+                    '<div class = "form-group">' +
+                      '<label>Employee ID</label>' +
+                      '<input class="form-control" name="jEmpID" placeholder="Employee ID" type="text" required>' +
+                    '</div>' +
+                  '</td>' +
+                '</tr>';
+
+   /* var $html = '<tr class="jdr1" id="' + rowid + '">' +
+                  '<td>' +
+                    '<div class = "form-group">' +
+                      '<label>Number ' + $sr +'</label>' +
                     '<input type="hidden" value="'+Math.floor((Math.random() * 10000) + 1)+'" name="count[]">' +
                   '</div>' +
                      '<div class = "form-group">' +
@@ -188,8 +229,9 @@ $(document).ready(function (){
                    '<label>Employee ID</label>' +
                      '<input class="form-control" name="jEmpID" placeholder="Employee ID" type="text" required>' +
                  '</div>' +
+                 '</td>' +
                '</tr>'; 
-
+*/
     $("#table-details").append($html);
   });
 

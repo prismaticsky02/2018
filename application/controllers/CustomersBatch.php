@@ -1,16 +1,16 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-class Aray extends CI_Controller {
+class CustomersBatch extends CI_Controller {
 public function index()
 {
-$this->load->view('array_view');
+$this->load->view('newcustomerbatch_view');
 }
 
 
 
 public function batchInsert()
 {
-	$this->load->model('Aray_model');
-	$result = $this->Aray_model->batchInsert($_POST);
+	$this->load->model('Customer_model');
+	$result = $this->Customer_model->batchInsert($_POST);
 		if($result){
 			echo 1;
 			$this->load->view('displayaray_view',$result);

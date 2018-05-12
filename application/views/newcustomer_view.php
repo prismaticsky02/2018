@@ -87,7 +87,7 @@
               <div class="radio">
                 <label>
                   <input type="radio" name="function" id="optionsRadios1" value="Sold-to">
-                    Sold-to
+                    Sold-to (all-in-one)
                 </label>
                 </div>
                 <div class="radio">

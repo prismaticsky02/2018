@@ -60,7 +60,7 @@
                         </div>
                         <div class = "form-group">
                           <label>Username</label>
-                            <input class="form-control" name="jname[]" placeholder="Username" type="text" required>
+                            <input class="form-control" name="jname[]" placeholder="Username" type="text" required autofocus>
                         </div>
                         <div class = "form-group">
                           <label>Password</label>
@@ -95,27 +95,20 @@
                           <label>Employee ID</label>
                             <input class="form-control" name="jEmpID[]" placeholder="Employee ID" type="text" required>
                         </div>
-                      
-                </tr>
+                        </td>
+                      </tr>
                     </tbody>
                   </table>
-
+                  <hr>
                   <div class="row">
-                    <div class="col-xs-12">
-                      <div class = "form-group">
-                        <button type="submit" class="btn btn-primary btn-block btn-flat autofocus">Create Web App User</button>
-                      </div>
+                    <div class="col-md-12">
+                      <button class="btn btn-primary btn-block btn-flat btn-add-more">Add More User</button>
+                      <button class="btn btn-primary btn-block btn-flat btn-remove-last">Remove Last User</button>
+                      <button type="submit" class="btn btn-primary btn-block btn-flat autofocus">Create Web App User</button>
                     </div>
                   </div>
 
-                  <div class="row">
-                    <div class="col-xs-12">
-                      <div class = "form-group">
-                        <button class="btn btn-primary btn-block btn-flat btn-add-more">Add More User</button>
-                      </div>
-                    </div>
-                  </div>
-                  </td>
+                 </div>
                 </form>
               </div>
             </div>
@@ -130,8 +123,6 @@
 </script>
 <!-- Bootstrap 3.3.7 -->
 <script src = "<?php echo base_url().'theme/bower_components/bootstrap/dist/js/bootstrap.min.js'; ?>"></script>
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/material.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <script>
@@ -148,7 +139,7 @@ $(document).ready(function (){
                     '</div>' +
                     '<div class = "form-group">'+
                       '<label>Username</label>' +
-                      '<input type="text" name="jname[]" placeholder="Username" class="form-control required">' +
+                      '<input type="text" name="jname[]" placeholder="Username" class="form-control required autofocus">' +
                     '</div>' +
                     '<div class = "form-group">' +
                       '<label>Password</label>' +
@@ -186,61 +177,16 @@ $(document).ready(function (){
                   '</td>' +
                 '</tr>';
 
-   /* var $html = '<tr class="jdr1" id="' + rowid + '">' +
-                  '<td>' +
-                    '<div class = "form-group">' +
-                      '<label>Number ' + $sr +'</label>' +
-                    '<input type="hidden" value="'+Math.floor((Math.random() * 10000) + 1)+'" name="count[]">' +
-                  '</div>' +
-                     '<div class = "form-group">' +
-                      '<label>Username</label>'
-                    '<input class="form-control" name="jname[]" placeholder="Username" type="text" required autofocus>' +
-                  '</div>' +
-                 '<div class = "form-group">' +
-                   '<label>Password</label>' +
-                   '<input class="form-control" name="jpass[]" placeholder="Password" type="password">' +
-                 '</div>' +
-                 '<div class = "form-group">' +
-                   '<label>Confirm Password</label>' +
-                   '<input class="form-control" name="jcpass[]" placeholder="Confirm Password" type="password" required>' +
-                 '</div>' + 
-                 '<div class="form-group">' +
-                   '<label>User Role</label>' +
-                   '<div class="radio">' +
-                     '<label>' +
-                     '<input type="radio" name="jrole[]" id="optionsRadios1" value="Employee_rw">' +
-                        'User can read and write' +
-                     '</label>' +
-                   '</div>' +
-                   '<div class="radio">' +
-                     '<label>' +
-                     '<input type="radio" name="jrole[]" id="optionsRadios2" value="Employee_rp">' +
-                       'User can read and download files' +
-                     '</label>' +
-                   '</div>' +
-                   '<div class="radio">' +
-                     '<label>' +
-                    '<input type="radio" name="jrole[]" id="optionsRadios3" value="Employee_ro">' +
-                    'User is read-only' +
-                    '</label>' +
-                   '</div>' +
-                  '</div>' +
-                 '<div class = "form-group">' +
-                   '<label>Employee ID</label>' +
-                     '<input class="form-control" name="jEmpID" placeholder="Employee ID" type="text" required>' +
-                 '</div>' +
-                 '</td>' +
-               '</tr>'; 
-*/
     $("#table-details").append($html);
   });
 
-  $("body").on('click', '.btn-remove-detail-row', function (e) {
+  $("body").on('click', '.btn-remove-last', function (e) {
     e.preventDefault();
       if($("#table-details tr:last-child").attr('id') != 'row1'){
         $("#table-details tr:last-child").remove();
       }
   });
+
 
 /** $("#frm_submit").on('submit', function (e) {
     e.preventDefault();
@@ -258,6 +204,7 @@ $(document).ready(function (){
       }
     });
   }); */
+
 });
 </script>
 

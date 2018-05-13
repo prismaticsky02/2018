@@ -24,7 +24,7 @@ class Materials extends CI_Controller{
         $data = array(
                 'MATERIAL_NAME' => $this->input->post('name'),
                 'MATERIAL_CATEGORY' => $this->input->post('category'),
-                'MATERIAL_PRICE' => $this->input->post('amount'),
+                'MATERIAL_PRICE' => $this->input->post('price'),
                 'MATERIAL_PERQUANTITY' => $this->input->post('perquant'),
                 'MATERIAL_DESCRIPTION' => $this->input->post('descript'),
                 'MATERIAL_DATECREATED' => $timestamp,

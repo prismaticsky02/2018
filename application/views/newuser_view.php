@@ -49,7 +49,7 @@
                 <h3 class="box-title">New Web App User</h3>
               </div>
               <div class="box-body">
-                <form role="form" autocomplete="on" action="<?php echo base_url()?>Users/batchInsert" method="POST">
+                <form role="form" autocomplete="on" action="<?php echo base_url()?>Users/batch_insert" method="POST">
                   <table style="width: 100%" class="table">
                     <tbody id="table-details">
                       <tr id="row1" class="jdr1">

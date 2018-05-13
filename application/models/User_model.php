@@ -26,7 +26,7 @@ class User_model extends CI_Model{
 		}
 	}
 
-	function batchInsert($data){
+	function batch_insert($data){
 			date_default_timezone_set('Asia/Manila');
         	$timestamp = date('Y-m-d H:i:s');
 			$count = count($data['count']);

@@ -80,14 +80,14 @@
             <label>Sex</label>
               <div class="radio">
                 <label>
-                  <input type="radio" name="sex" id="optionsRadios1" value="Male">
-                    Male
+                  <input type="radio" name="sex" id="optionsRadios1" value="Female">
+                    Female
                 </label>
                 </div>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="sex" id="optionsRadios2" value="Female">
-                      Female
+                    <input type="radio" name="sex" id="optionsRadios2" value="Male">
+                      Male
                     </label>
                 </div>
             </div>

@@ -52,7 +52,7 @@
                 <h3 class="box-title">New Employee</h3>
               </div>
               <div class="box-body">
-              	<form role="form" autocomplete="on" action="<?php echo base_url()?>EmployeesBatch/batchInsert" method="POST">
+              	<form role="form" autocomplete="on" action="<?php echo base_url()?>EmployeesBatch/batch_insert" method="POST">
                   <table style="width: 100%" class="table">
                   	<thead>
 						<tr>
@@ -70,15 +70,15 @@
           <tbody id="table-details">
             <tr id="row1" class="jdr1">
 							<td><span>1</span><input type="hidden" value="6437" name="count[]"></td>
-							<td><input type="text" required="" class="form-control input-sm"  placeholder="First Name" name="jfname[]"></td>
-              <td><input type="text" required="" class="form-control input-sm"  placeholder="Middle Name" name="jmname[]"></td>
-              <td><input type="text" required="" class="form-control input-sm"  placeholder="Last Name" name="jlname[]"></td>
-							<td><select class="form-control input-sm"  placeholder="Sex" name="jsex[]">
+							<td><input type="text" required="" class="form-control"  placeholder="First Name" name="jfname[]"></td>
+              <td><input type="text" required="" class="form-control"  placeholder="Middle Name" name="jmname[]"></td>
+              <td><input type="text" required="" class="form-control"  placeholder="Last Name" name="jlname[]"></td>
+							<td><select class="form-control"  placeholder="Sex" name="jsex[]">
                   <option value="Female">Female</option>
                   <option value="Male">Male</option>
               </select></td>
               <td><textarea class = "form-control" name="jaddress[]" rows="3" placeholder= "Address" required></textarea></td>
-              <td><input type="text" required="" class="form-control input-sm"  placeholder="Contact Number" name="jcontact[]"></td>
+              <td><input type="text" required="" class="form-control"  placeholder="Contact Number" name="jcontact[]"></td>
               <td><div class="form-group">
                     <div class="input-group date">
                       <div class="input-group-addon">
@@ -138,15 +138,15 @@ $(document).ready(function (){
 		var rowid = Math.random();
 		var $html = '<tr class="jdr1" id="' + rowid + '">' +
 			'<td><span>' + $sr + '</span><input type="hidden" name="count[]" value="'+Math.floor((Math.random() * 10000) + 1)+'"></td>' + 
-      '<td><input type="text" required="" class="form-control input-sm"  placeholder="First Name" name="jfname[]"></td>' +
-      '<td><input type="text" required="" class="form-control input-sm"  placeholder="Middle Name" name="jmname[]"></td>' +
-      '<td><input type="text" required="" class="form-control input-sm"  placeholder="Last Name" name="jlname[]"></td>' +
-      '<td><select class="form-control input-sm"  placeholder="Sex" name="jsex[]">' +
+      '<td><input type="text" required="" class="form-control"  placeholder="First Name" name="jfname[]"></td>' +
+      '<td><input type="text" required="" class="form-control"  placeholder="Middle Name" name="jmname[]"></td>' +
+      '<td><input type="text" required="" class="form-control"  placeholder="Last Name" name="jlname[]"></td>' +
+      '<td><select class="form-control"  placeholder="Sex" name="jsex[]">' +
         '<option value="Female">Female</option>' +
           '<option value="Male">Male</option>' +
             '</select></td>' +
               '<td><textarea class = "form-control" name="jaddress[]" rows="3" placeholder= "Address" required></textarea></td>' + 
-              '<td><input type="text" required="" class="form-control input-sm"  placeholder="Contact Number" name="jcontact[]"></td>' +
+              '<td><input type="text" required="" class="form-control"  placeholder="Contact Number" name="jcontact[]"></td>' +
               '<td><div class="form-group">' +
                     '<div class="input-group date">' +
                       '<div class="input-group-addon">' +

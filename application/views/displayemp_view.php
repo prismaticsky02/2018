@@ -9,7 +9,7 @@
         <h5><?php echo $EMPLOYEE_SEX;?></h5>
         <h5><?php echo $EMPLOYEE_ADDRESS;?></h5>
         <h5><?php echo $EMPLOYEE_CONTACT;?></h5>
-        <h5><?php echo $EMPLOYEE_BIRTHDAY;?></h5>
+        <h5><?php echo $EMPLOYEE_BIRTHDATE;?></h5>
         <h5><?php echo $EMPLOYEE_EMAIL;?></h5>
         <h5><?php echo $EMPLOYEE_DATECREATED;?></h5>
         <h5><?php echo $EMPLOYEE_LASTCHANGED;?></h5>

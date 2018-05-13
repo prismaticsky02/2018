@@ -12,5 +12,5 @@
         <h5><?php echo $MATERIAL_LASTCHANGED;?></h5>
         <h5><?php echo $MATERIAL_CHANGEDBY;?></h5>
         <h5><?php echo $MATERIAL_STATUS;?></h5>
-</body>s
+</body>
 </html>

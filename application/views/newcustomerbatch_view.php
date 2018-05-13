@@ -51,7 +51,7 @@
                 <h3 class="box-title">New Customer</h3>
               </div>
               <div class="box-body">
-              	<form role="form" autocomplete="on" action="<?php echo base_url()?>CustomersBatch/batchInsert" method="POST">
+              	<form role="form" autocomplete="on" action="<?php echo base_url()?>CustomersBatch/batch_insert" method="POST">
                   <table style="width: 100%" class="table">
                   	<thead>
 						<tr>
@@ -67,15 +67,15 @@
           <tbody id="table-details">
             <tr id="row1" class="jdr1">
 							<td><span>1</span><input type="hidden" value="6437" name="count[]"></td>
-							<td><input type="text" required="" class="form-control input-sm"  placeholder="Full Name" name="jname[]"></td>
+							<td><input type="text" required="" class="form-control"  placeholder="Full Name" name="jname[]"></td>
               <td><textarea class = "form-control" name="jaddress[]" rows="3" placeholder= "Address" required></textarea></td>
-              <td><input type="text" required="" class="form-control input-sm"  placeholder="Contact Number" name="jcontact[]"></td>
+              <td><input type="text" required="" class="form-control"  placeholder="Contact Number" name="jcontact[]"></td>
               <td><input class="form-control" name="jemail[]" placeholder="Email Address" type="email"></td>
-							<td><select class="form-control input-sm"  placeholder="Customer Type" name="jtype[]">
+							<td><select class="form-control"  placeholder="Customer Type" name="jtype[]">
                 <option value="Private">Private</option>
                 <option value="Public">Public</option>
               </select></td>
-              <td><select class="form-control input-sm"  placeholder="Customer Function" name="jfunction[]">
+              <td><select class="form-control"  placeholder="Customer Function" name="jfunction[]">
                 <option value="Sold-to">Sold-to (all-in-one)</option>
                 <option value="Bill-to">Bill-to</option>
                 <option value="Payer">Payer</option>
@@ -129,15 +129,15 @@ $(document).ready(function (){
 		var rowid = Math.random();
 		var $html = '<tr class="jdr1" id="' + rowid + '">' +
 			'<td><span>' + $sr + '</span><input type="hidden" name="count[]" value="'+Math.floor((Math.random() * 10000) + 1)+'"></td>' + 
-			'<td><input type="text" required="" class="form-control input-sm"  placeholder="Full Name" name="jname[]"></td>' +
+			'<td><input type="text" required="" class="form-control"  placeholder="Full Name" name="jname[]"></td>' +
               '<td><textarea class = "form-control" name="jaddress[]" rows="3" placeholder= "Address" required></textarea></td>' +
-              '<td><input type="text" required="" class="form-control input-sm"  placeholder="Contact Number" name="jcontact[]"></td>' +
+              '<td><input type="text" required="" class="form-control"  placeholder="Contact Number" name="jcontact[]"></td>' +
               '<td><input class="form-control" name="jemail[]" placeholder="Email Address" type="email"></td>' +
-              '<td><select class="form-control input-sm"  placeholder="Customer Type" name="jtype[]">' +
+              '<td><select class="form-control"  placeholder="Customer Type" name="jtype[]">' +
                 '<option value="Private">Private</option>' +
                 '<option value="Public">Public</option>' +
               '</select></td>' +
-              '<td><select class="form-control input-sm"  placeholder="Customer Function" name="jfunction[]">' +
+              '<td><select class="form-control"  placeholder="Customer Function" name="jfunction[]">' +
                 '<option value="Sold-to">Sold-to (all-in-one)</option>' +
                 '<option value="Bill-to">Bill-to</option>' +
                 '<option value="Payer">Payer</option>' +

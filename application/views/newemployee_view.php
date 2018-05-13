@@ -50,7 +50,7 @@
           <h3 class="box-title">New Employee</h3>
          </div>
   <!-- /.login-logo -->
-      <form role="form" autocomplete="on" action = "<?php echo base_url()?>Employee/add_employee" method="POST">
+      <form role="form" autocomplete="on" action = "<?php echo base_url()?>Employees/add_employee" method="POST">
         <div class="box-body">
           <div class = "form-group">
             <label>First Name</label>
@@ -68,14 +68,14 @@
             <label>Sex</label>
               <div class="radio">
                 <label>
-                  <input type="radio" name="sex" id="optionsRadios1" value="Male">
-                    Male
+                  <input type="radio" name="sex" id="optionsRadios1" value="Female">
+                    Female
                 </label>
                 </div>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="sex" id="optionsRadios2" value="Female">
-                      Female
+                    <input type="radio" name="sex" id="optionsRadios2" value="Male">
+                      Male
                     </label>
                   </div>
             </div>

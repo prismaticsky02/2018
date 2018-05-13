@@ -51,7 +51,7 @@
         <div class="box-body">
         
   <!-- /.login-logo -->
-      <form role="form" autocomplete="on" action = "<?php echo base_url()?>Material/add_material" method="POST">
+      <form role="form" autocomplete="on" action = "<?php echo base_url()?>Materials/add_material" method="POST">
           <div class = "form-group">
             <label>Name</label>
             <input class="form-control" name="name" placeholder="For packages, use slashes; e.g. Exhumation/Burial" type="text" required autofocus>
@@ -81,13 +81,11 @@
                   <input type="radio" name="category" id="optionsRadios1" value="Grave Ownership">
                     Grave Ownership
                 </label>
-                </div>
-              
-              
+                </div> 
             </div>
             <div class = "form-group">
-            <label>Amount</label>
-            <input class="form-control" name="amount" placeholder="Amount" type="text" required>
+            <label>Price</label>
+            <input class="form-control" name="price" placeholder="Price" type="text" required>
           </div>
           <div class = "form-group">
             <label>Quantity sold for amount given</label>

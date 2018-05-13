@@ -7,10 +7,10 @@ $this->load->view('newuserbatch_view');
 
 
 
-public function batchInsert()
+public function batch_insert()
 {
 	$this->load->model('User_model');
-	$result = $this->User_model->batchInsert($_POST);
+	$result = $this->User_model->batch_insert($_POST);
 		if($result){
 			echo 1;
 			$this->load->view('displayaray_view',$result);

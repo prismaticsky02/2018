@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>New Web App User | Manila South Cemetery</title>
+  <title>New Offers/Services | Manila South Cemetery</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -31,7 +31,7 @@
   <div class="wrapper">
     <div class="content-wrapper">
       <section class = "content-header">
-        <h1>Web App Users</h1>
+        <h1>Offers and Services</h1>
         <ol class = "breadcrumb">
           <li>
             <a href="#">
@@ -39,7 +39,7 @@
             </a>
           </li>
           <li class = "active">
-            <a href="#">Web App Users</a>
+            <a href="#">Offers and Services</a>
           </li>
         </ol>
       </section>
@@ -48,46 +48,47 @@
           <div class = col-md-12>
             <div class="box box-primary">
               <div class="box-header with-border">
-                <h3 class="box-title">New Web App User</h3>
+                <h3 class="box-title">New Offers/Services</h3>
               </div>
               <div class="box-body">
-              	<form role="form" autocomplete="on" action="<?php echo base_url()?>UsersBatch/batch_insert" method="POST">
+              	<form role="form" autocomplete="on" action="<?php echo base_url()?>MaterialsBatch/batch_insert" method="POST">
                   <table style="width: 100%" class="table">
                   	<thead>
 						<tr>
 							<th>Number</th>
-							<th>Username</th>
-							<th>Password</th>
-							<th>Confirm Password</th>
-							<th>User Role</th>
-							<th>Employee ID</th>
+							<th>Name</th>
+              <th>Category</th>
+							<th>Price</th>
+							<th>per Quantity</th>
+							<th>Description</th>
 						</tr>
 					</thead>
           <tbody id="table-details">
             <tr id="row1" class="jdr1">
 							<td><span>1</span><input type="hidden" value="6437" name="count[]"></td>
-							<td><input type="text" required="" class="form-control"  placeholder="Username" name="jname[]"></td>
-							<td><input type="password" required="" class="form-control" placeholder="Password" name="jpass[]"></td>
-							<td><input type="password" required="" class="form-control" placeholder="Confirm Password" name="jcpass[]"></td>
-							<td><select class="form-control"  placeholder="User Role" name="jrole[]">
-                <option value="Employee_rw">Read and Write</option>
-                <option value="Employee_rp">Read and Print</option>
-                <option value="Employee_ro">Read only</option>
+							<td><input type="text" required="" class="form-control"  placeholder="Material Name" name="jname[]"></td>
+							<td><select class="form-control"  placeholder="Category" name="jcat[]">
+                <option value="Permit">Permit</option>
+                <option value="Permit and Package">Permit and Package</option>
+                <option value="Grave Structure">Grave Structure</option>
+                <option value="Grave Structure">Grave Ownership</option>
               </select></td>
-							<td><input type="text" required="" class="form-control" placeholder="Employee ID" name="jEmpID[]"></td>
+							<td><input class="form-control" name="jprice[]" placeholder="Price" type="text" required></td>
+              <td><input class="form-control" name="jpquant[]" placeholder="Quantity" type="text" required></td>
+              <td><textarea class = "form-control" name="jdesc[]" rows="3" placeholder= "Description" required></textarea></td>
 						</tr>
 					</tbody>
 					</table>
 					<hr>
 				   <div class="row">
                     <div class="col-md-4">
-                        <button class="btn btn-primary btn-block btn-flat btn-add-more">Add More User</button>
+                        <button class="btn btn-primary btn-block btn-flat btn-add-more">Add More Offer/Service</button>
                     </div>
                     <div class="col-md-4">
-                        <button class="btn btn-primary btn-block btn-flat btn-remove-last">Remove Last User</button>
+                        <button class="btn btn-primary btn-block btn-flat btn-remove-last">Remove Offer/Service</button>
                     </div>
                     <div class="col-md-4">
-                        <button type="submit" class="btn btn-primary btn-block btn-flat">Create Web App User</button>
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Create Offer/Service</button>
                     </div>
                    </div>
               	  </div>
@@ -125,15 +126,16 @@ $(document).ready(function (){
 		var rowid = Math.random();
 		var $html = '<tr class="jdr1" id="' + rowid + '">' +
 			'<td><span>' + $sr + '</span><input type="hidden" name="count[]" value="'+Math.floor((Math.random() * 10000) + 1)+'"></td>' + 
-			'<td><input type="text" name="jname[]" placeholder="Username" class="form-control"></td>' +
-			'<td><input type="password" name="jpass[]" placeholder="Password" class="form-control"></td>' +
-			'<td><input type="password" required="" class="form-control" placeholder="Confirm Password" name="jcpass[]"></td>' +
-			'<td><select class="form-control"  placeholder="User Role" name="jrole[]">' +
-                '<option value="Employee_rw">Read and Write</option>' +
-                '<option value="Employee_rp">Read and Print</option>' +
-                '<option value="Employee_ro">Read only</option>' +
-                 '</select></td>' +
-			'<td><input type="text" name="jEmpID[]" placeholder="Employee ID" class="form-control"></td>' +
+      '<td><input type="text" required="" class="form-control"  placeholder="Material Name" name="jname[]"></td>' +
+              '<td><select class="form-control"  placeholder="Category" name="jcat[]">' +
+                '<option value="Permit">Permit</option>' +
+                '<option value="Permit and Package">Permit and Package</option>' +
+                '<option value="Grave Structure">Grave Structure</option>' +
+                '<option value="Grave Structure">Grave Ownership</option>' +
+              '</select></td>' +
+              '<td><input class="form-control" name="jprice[]" placeholder="Price" type="text" required></td>' +
+              '<td><input class="form-control" name="jpquant[]" placeholder="Quantity" type="text" required></td>' +
+              '<td><textarea class = "form-control" name="jdesc[]" rows="3" placeholder= "Description" required></textarea></td>' +
 		'</tr>';
 
 		$("#table-details").append($html);

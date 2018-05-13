@@ -49,7 +49,7 @@
           <h3 class="box-title">New Customer</h3>
         </div>
   <!-- /.login-logo -->
-      <form role="form" autocomplete="on" action = "<?php echo base_url()?>Customer/add_customer" method="POST">
+      <form role="form" autocomplete="on" action = "<?php echo base_url()?>Customers/add_customer" method="POST">
         <div class="box-body">
           <div class = "form-group">
             <label>Full Name</label>
